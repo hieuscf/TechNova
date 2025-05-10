@@ -1,0 +1,167 @@
+@use "sass:color";
+
+.logincontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: #f5f5f5;
+
+  .loginbox {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+
+    .login-form-container {
+      font-family: var(--font-family);
+      min-height: 450px;
+      padding: 2rem;
+
+      .form-logo {
+        font-family: var(--font-family-logo) !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        color: #4285f4;
+      }
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #333;
+        display: flex;
+        justify-content: center;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+          width: 90%;
+          padding: 0.75rem 1rem;
+          border: 1px solid #e0e0e0;
+          border-radius: 4px;
+          font-size: 1rem;
+          transition: border-color 0.2s;
+
+          &:focus {
+            outline: none;
+            border-color: #4582f4;
+          }
+        }
+      }
+
+      .form-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1rem 1.5rem 1rem;
+
+        .remember-me {
+          display: flex;
+          align-items: center;
+
+          input[type="checkbox"] {
+            margin-right: 0.5rem;
+            cursor: pointer;
+          }
+
+          label {
+            font-size: 0.9rem;
+            color: #333;
+            cursor: pointer;
+          }
+        }
+
+        .forgot-password {
+          font-size: 0.9rem;
+          color: #4285f4;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .login-button {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #4285f4;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        &:hover {
+          background-color: color.adjust(#4285f4, $lightness: -3%);
+        }
+      }
+
+      .google-sign-in {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #fff;
+        color: #333;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        &:hover {
+          background-color: color.adjust(#fff, $lightness: -3%);
+        }
+      }
+      .login-options{
+        text-align: center;
+        font-size: 0.9rem;
+        .social-icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:2rem;
+            &:hover {
+                cursor: pointer;
+              }
+
+        }
+      }
+      .signup-prompt {
+        text-align: center;
+        font-size: 0.9rem;
+
+        a {
+          color: #4285f4;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

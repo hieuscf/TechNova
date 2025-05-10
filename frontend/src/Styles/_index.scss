@@ -1,0 +1,10 @@
+/* Light mode mặc định */
+body {
+    margin: 0;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  

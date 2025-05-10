@@ -1,0 +1,24 @@
+/* Import font ở ngoài :root */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+  // Main UI, Paragraph, Dashboard
+  --font-family-main: 'Inter', sans-serif;
+
+  // Logo
+  --font-family-logo: 'Ubuntu', sans-serif;
+
+  // Font chung, fallback hoặc nội dung đa dạng
+  --font-family: 'Roboto', sans-serif;
+
+  // Default font setup
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
