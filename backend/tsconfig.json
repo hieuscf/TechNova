@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // hoặc ES6/ESNext tùy vào môi trường Node
+    "module": "ESNext", // hỗ trợ import/export (chỉ khi Node.js hỗ trợ ES modules)
+    "moduleResolution": "node", // xử lý đúng các module kiểu Node.js
+    "esModuleInterop": true, // cho phép import các module CommonJS như là ES module
+    "forceConsistentCasingInFileNames": true, // đảm bảo tên file nhất quán
+    "strict": true, // kích hoạt chế độ kiểm tra chặt chẽ
+    "skipLibCheck": true, // bỏ qua kiểm tra các kiểu thư viện trong node_modules
+    "sourceMap": true, // tạo file source map để hỗ trợ debug
+    "outDir": "dist", // thư mục đầu ra cho các file biên dịch
+    "resolveJsonModule": true, // hỗ trợ import file JSON
+    "lib": ["ES2020"] // hỗ trợ các tính năng ES2020 và các API Node.js
+  },
+  "include": ["src"], // bao gồm tất cả các file TypeScript trong thư mục src
+  "exclude": ["node_modules"] // loại bỏ thư mục node_modules khỏi quá trình biên dịch
+}
