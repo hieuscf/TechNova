@@ -2,7 +2,8 @@ import './App.css'
 import { Toaster } from "react-hot-toast";
 import {Routes, Route } from "react-router-dom";
 
-import LoginPage from './pages/LoginPage'
+import LoginPage from './pages/LoginPage';
+import SigninPage  from './pages/SignupPage';
 
 import { themeStyles } from './constant/theme';
 import { useThemeStore } from './store/useThemStore';
@@ -15,6 +16,7 @@ function App() {
       <Toaster position="top-right" />
       <Routes>
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signin" element={<SigninPage />} />
         {/* Thêm các route khác nếu cần */}
       </Routes>
     </div>

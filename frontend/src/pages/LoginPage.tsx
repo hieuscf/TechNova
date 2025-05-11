@@ -141,8 +141,8 @@ const LoginPage = () => {
           <div className="signup-prompt">
             <p>
               I have an account?{" "}
-              <Link to="/Sign-in" style={{ textDecoration: "underline" }}>
-                Sign-in
+              <Link to="/signin" style={{ textDecoration: "underline" }}>
+                Sign-up
               </Link>
             </p>
           </div>

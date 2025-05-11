@@ -29,7 +29,7 @@ const SigninPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Sign-in with", formData);
+    console.log("Sign-up with", formData);
     // TODO: xử lý đăng ký
     const emailError = isValidEmail(formData.email);
     const passwordError = isValidPassword(formData.password);
@@ -69,7 +69,7 @@ const SigninPage = () => {
             <SiSpacex />
             Tech Nova
           </h3>
-          <h2>Sign-In Account</h2>
+          <h2>Sign-up Account</h2>
 
           <form onSubmit={handleSubmit}>
             <div className="form-group">
@@ -127,18 +127,18 @@ const SigninPage = () => {
               className="login-button"
               disabled={isLoggingIn}
             >
-              {isLoggingIn ? "Đang đăng ký..." : "Sign in"}
+              {isLoggingIn ? "Đang đăng ký..." : "Sign up"}
             </button>
 
             {/* Google */}
             <button type="button" className="google-sign-in">
               <FcGoogle size={20} />
-              <span>Sign in with Google</span>
+              <span>Sign up with Google</span>
             </button>
           </form>
           {/*Facebook instagram apple twiter */}
           <div className="login-options">
-            <p>Sign-in using another method</p>
+            <p>Sign-up using another method</p>
             <div className="social-icons">
               <div>
                 <GrInstagram size={20} />
