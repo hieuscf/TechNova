@@ -20,7 +20,7 @@ const SigninPage = () => {
     password: "",
   });
 
-  const { login, isLoggingIn } = useAuthStore();
+  const { signup, isSigningUp } = useAuthStore();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -51,7 +51,7 @@ const SigninPage = () => {
 
     // Gửi API...
     try {
-      await login(formData); // <-- Gọi API đăng nhập
+      await signup(formData); // <-- Gọi API đăng nhập
     } catch (error: unknown) {
       if (error instanceof Error) {
         toast.error(error.message || "Đăng nhập thất bại");
@@ -125,9 +125,9 @@ const SigninPage = () => {
             <button
               type="submit"
               className="login-button"
-              disabled={isLoggingIn}
+              disabled={isSigningUp}
             >
-              {isLoggingIn ? "Đang đăng ký..." : "Sign up"}
+              {isSigningUp ? "Đang đăng ký..." : "Sign up"}
             </button>
 
             {/* Google */}

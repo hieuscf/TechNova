@@ -18,6 +18,10 @@ interface AuthState {
   signup: (data: { username:string , email: string; password: string }) => Promise<void>;
 }
 
+const BASE_URL =
+  import.meta.env.MODE === "development" ? "http://localhost:3000" : "/";
+
+
 export const useAuthStore = create<AuthState>((set, get) => ({
   isLoggingIn: false,
   authUser: null,
@@ -35,7 +39,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       const res = await axiosInstance.post("/auth/signup", data);
       set({ authUser: res.data });
       toast.success("Đăng ký thành công");
-      get().connectSocket();
+      // get().connectSocket();
     } catch (error: unknown) {
       if (axios.isAxiosError(error)) {
         const message =

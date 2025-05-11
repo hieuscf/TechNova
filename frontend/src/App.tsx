@@ -16,7 +16,7 @@ function App() {
       <Toaster position="top-right" />
       <Routes>
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/signin" element={<SigninPage />} />
+        <Route path="/signup" element={<SigninPage />} />
         {/* Thêm các route khác nếu cần */}
       </Routes>
     </div>
