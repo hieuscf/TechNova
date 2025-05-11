@@ -7,8 +7,8 @@ import { FcGoogle } from "react-icons/fc";
 import { GrInstagram } from "react-icons/gr";
 import { SiThreads } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
-// import { SiSpacex } from "react-icons/si";
-// <SiSpacex />;
+import { SiSpacex } from "react-icons/si";
+
 
 
 
@@ -60,7 +60,10 @@ const LoginPage = () => {
     <div className="logincontainer">
       <div className="loginbox">
         <div className="login-form-container">
-          <h3 className="form-logo">Tech Nova</h3>
+          <h3 className="form-logo">
+            <SiSpacex />
+            Tech Nova
+          </h3>
           <h2>Login Account</h2>
 
           <form onSubmit={handleSubmit}>
