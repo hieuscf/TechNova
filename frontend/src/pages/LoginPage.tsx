@@ -1,5 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 import {isValidEmail,isValidPassword} from "../utils/validators";
 import {  useAuthStore } from "../store/useAuthStore";
 
@@ -139,10 +140,10 @@ const LoginPage = () => {
           {/* Signup link */}
           <div className="signup-prompt">
             <p>
-              Don't have an account?{" "}
-              <a style={{ textDecoration: "underline" }} href="#signup">
-                Sign up
-              </a>
+              I have an account?{" "}
+              <Link to="/Sign-in" style={{ textDecoration: "underline" }}>
+                Sign-in
+              </Link>
             </p>
           </div>
         </div>
