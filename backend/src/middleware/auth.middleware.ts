@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import User, { IUser } from "../modules/auth/auth.model"; // Ensure IUser is exported from the model
+import User, { IUser } from "../modules/auth/auth.model.js"; // Ensure IUser is exported from the model
 import { Request, Response, NextFunction } from "express";
 import { Document } from "mongoose";
 

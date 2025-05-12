@@ -1,7 +1,8 @@
 import bcrypt from "bcryptjs";
 import { Request, Response } from "express";
-import User from "../auth.model";
-import { generateTokenDefault } from "../service/token.service";
+import User from "../auth.model.js";
+import { generateTokenDefault } from "../service/token.service.js";
+import jwt from "jsonwebtoken";
 
 export const signup = async (req: Request, res: Response) => {
   const { username , email, password } = req.body;
@@ -85,5 +86,25 @@ export const signup = async (req: Request, res: Response) => {
       error instanceof Error ? error.message : error
     );
     res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+export const checkAuth = async (req: Request, res: Response) => {
+  try {
+    res.status(200).json(req.user);
+  } catch (error: unknown) {
+    console.log(jwt.TokenExpiredError);
+    if (
+      error instanceof jwt.TokenExpiredError ||
+      (error instanceof Error && error.message === "jwt expired")
+      
+    ) {
+      return res
+        .status(401)
+        .json({ message: "Token expired. Please login again." });
+    }
+
+    console.error("Error in protectRoute middleware:", error);
+    res.status(500).json({ message: "Internal server error" });
   }
 };
