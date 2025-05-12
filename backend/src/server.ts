@@ -21,6 +21,8 @@ if (!process.env.JWT_SECRET) {
 
 app.use(cookieParser());
 app.use(express.json());
+
+// (Nếu bạn có xử lý form URL-encoded)
 app.use(express.urlencoded({ extended: true }));
 
 // Cấu hình CORS cho phép frontend localhost kết nối
@@ -30,6 +32,7 @@ app.use(
     credentials: true,
   })
 );
+
 
 // Sử dụng các route cho API
 app.use("/api/auth", authRoutes);

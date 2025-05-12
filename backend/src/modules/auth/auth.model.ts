@@ -1,5 +1,6 @@
 import mongoose, { Schema, Types } from "mongoose";
 
+
 // Interface cho FriendRequest
 interface IFriendRequest {
     userId: Types.ObjectId;
