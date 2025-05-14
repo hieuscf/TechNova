@@ -1,0 +1,166 @@
+@import "@radix-ui/colors/black-alpha.css";
+@import "@radix-ui/colors/violet.css";
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    
+    .header-logo-left{
+        width: 15vw;
+        .header-logo{
+            font-family: var(--font-family-logo) !important;
+            margin-bottom: 0.5rem;
+            color: #4285f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: 700;
+            gap: 0.5rem;
+        }
+        .search-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+    .header-story{
+        padding: 1rem;
+        min-width: 500px;
+        .home-header{
+            font-family: var(--font-family-logo) !important;
+            margin-bottom: 0.5rem;
+            color: #333;
+            display: flex;
+            justify-content: flex-start; // Căn trái trong chính nó
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            gap: 0.5rem;
+        }
+        .post-creator {
+            padding: 0.75rem;
+            &-header {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              margin-bottom: 1rem;
+            }
+          }
+          .visibility-selector {
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            border-radius: 1.5rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            color: #000000;
+            cursor: pointer;
+            border: 1px solid #e0e0e0;
+            
+            .dropdown-icon {
+              margin-left: 0.5rem;
+              font-size: 0.7rem;
+            }
+            
+            &:hover {
+              background-color: darken( #f0f0f0, 5%);
+            }
+          }
+          .post-content {
+            textarea {
+              width: 100%;
+              min-height: 20px; // Nhỏ ban đầu
+              max-height: 20px;
+              border: none;
+              outline: none;
+              font-size: 1rem;
+              color: #000000;
+              background-color: transparent;
+              resize: none;
+              font-family: inherit;
+              transition: all 0.3s ease;
+              
+              &::placeholder {
+                color: #999999;
+              }
+            }
+            /* Khi có nội dung, textarea mở rộng */
+            &.expanded textarea {
+                min-height: 80px;
+                max-height: 100px;
+              }          
+        }
+        .post-actions{
+            .action-icons{
+                display: flex;
+                gap: 1rem;
+                margin-top: 1rem;
+                background-color: #fff;
+                font-size: 0.9rem;
+                color: #000000;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border: none;
+                button {
+                    background: none;
+                    border: none;
+                }
+                
+                &:hover {
+                    color: #4285f4;
+                    
+                }
+            }
+            .submit-button{
+                font-family: inherit;
+                margin-right: 30px;
+                .post-submit-button{
+                    cursor: pointer;
+                    width: 50px;
+                    height: 25px;
+                }
+
+            }
+            &.expanded {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+.AvatarRoot {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	overflow: hidden;
+	user-select: none;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	background-color: var(--black-a3);
+}
+
+.AvatarImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: inherit;
+}
+
+.AvatarFallback {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	color: var(--violet-11);
+	font-size: 15px;
+	line-height: 1;
+	font-weight: 500;
+}

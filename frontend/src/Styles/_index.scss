@@ -1,10 +1,20 @@
 /* Light mode mặc định */
 body {
     margin: 0;
-    background-color: var(--primary-bg);
-    color: var(--primary-text);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin-right: 8%;
+    margin-left: 8%;
+
+    
 }
+body.light-theme {
+    background-color: #f0f0f0 !important;
+    color: #000 !important;
+  }
   
+  body.dark-theme {
+    background-color: #121212 !important;
+    color: #fff !important;
+  }
