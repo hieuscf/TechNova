@@ -4,6 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 
 import connectDB from "./config/database/mongoDB.js";
+import "./config/cloudinary/cloudinary.js";
 
 
 import authRoutes from "./modules/auth/auth.routes.js";
@@ -13,11 +14,14 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+
 // Kiểm tra xem biến môi trường cần thiết có tồn tại không
 if (!process.env.JWT_SECRET) {
   console.error("JWT_SECRET environment variable is missing.");
   process.exit(1); // Dừng server nếu thiếu biến môi trường quan trọng
 }
+
+console.log("Cloudinary config loaded!");
 
 app.use(cookieParser());
 app.use(express.json());
